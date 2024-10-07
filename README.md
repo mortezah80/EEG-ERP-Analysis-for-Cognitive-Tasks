@@ -124,17 +124,28 @@ EEG = pop_creabasiceventlist(EEG, 'AlphanumericCleaning', 'on');
 EEG_P3 = pop_epochbin(EEG, [-200.0 800.0], 'pre');
 ```
 
-### Image Placement: A diagram explaining the event binning process and epoching (e.g., the time window around the stimulus) can be helpful here.
-
 ## ERP Analysis
 
-ERP waveforms are computed for different conditions:
-- **Correct Target vs Correct Non-Target**
-- **Target Incorrect vs Correct Responses**
+ERP waveforms are computed for different conditions to analyze the P3 component, which is related to cognitive processing. The conditions compared are:
+- **Correct Target (BIN1) vs Correct Non-Target (BIN2)**
 
-The P3 component is analyzed in central-parietal electrodes (e.g., Fz, Cz).
+The analysis focuses on the P3 component, which is typically strongest in central-parietal electrodes such as Fz, Cz, and Pz.
 
-### Image Placement: Display ERP waveforms (e.g., P3 analysis for Fz) and heatmaps showing mean amplitude differences across conditions.
+### P3 Component Analysis
+
+The following figure shows the grand-averaged ERP waveforms for Correct Target (BIN1, black line) and Correct Non-Target (BIN2, red line) conditions across multiple electrodes. The differences in the P3 component are visible, particularly in the central-parietal electrodes (e.g., Fz, Cz, Pz), where the P3 amplitude is more pronounced in the Correct Target condition.
+
+![ERP Waveforms](images/erps.png)
+*Figure 1: Grand-averaged ERP waveforms for Correct Target (BIN1) and Correct Non-Target (BIN2) conditions across different electrodes.*
+
+### Key Observations:
+- **Fz, Cz, Pz**: The P3 component, a positive deflection around 300-500 ms post-stimulus, is clearly visible in these electrodes. The amplitude is higher in the Correct Target (BIN1) condition than in the Correct Non-Target (BIN2) condition, indicating stronger cognitive processing for target stimuli.
+- **Parietal Electrodes (P3, P4, Pz)**: These electrodes also show a pronounced difference between the two conditions, with higher amplitudes for correct targets.
+- **Frontal and Central Electrodes**: Electrodes such as Fz and Cz show the strongest P3 responses, in line with typical findings in ERP studies.
+
+This analysis supports the typical finding that the P3 component is larger for target stimuli, reflecting heightened attentional and working memory processes.
+
+
 
 ## Installation
 
