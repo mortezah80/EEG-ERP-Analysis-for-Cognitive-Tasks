@@ -9,7 +9,7 @@ This repository contains the code and data for preprocessing and analyzing EEG d
 - [Independent Component Analysis (ICA)](#independent-component-analysis-ica)
 - [Event List and Epoching](#event-list-and-epoching)
 - [ERP Analysis](#erp-analysis)
-- 
+  
 ## Introduction
 
 This project focuses on preprocessing EEG data from a visual oddball task using MATLAB and the EEGLAB toolbox. The primary steps include loading the data, removing artifacts, and performing ERP analysis. The main goal is to study the P3 and ERN components, which reflect cognitive processing of targets and errors, respectively.
