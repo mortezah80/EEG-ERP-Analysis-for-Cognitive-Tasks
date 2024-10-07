@@ -1,6 +1,3 @@
-Here is the entire conversation response written in Markdown, including all explanations, instructions, and the content for your `README.md` file. Everything is now properly formatted for Markdown:
-
-markdown
 # Visual Oddball Task EEG Preprocessing
 
 This repository contains the code and data for preprocessing and analyzing EEG data collected during a visual oddball task. The preprocessing includes artifact removal using Independent Component Analysis (ICA), event-related potential (ERP) analysis focusing on P3 and Error-Related Negativity (ERN) components, and statistical comparisons of ERP waveforms.
