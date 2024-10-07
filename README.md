@@ -62,17 +62,56 @@ Bad channels are identified based on noise levels in both time and frequency dom
 ### Example: Frequency-domain and time-domain analysis for Subject 1
 - **Channel F8** was removed due to high-frequency noise.
 
-### Image Placement: You can include pictures of the frequency and time-domain plots for different subjects, such as Subject 1 (high noise in channel F8) and Subject 9 (noisy channels PO8 and PO3) here.
+### Image Placement: Frequency and Time-domain Plots
+You can include pictures of the frequency and time-domain plots for different subjects, such as Subject 1 (high noise in channel F8) and Subject 9 (noisy channels PO8 and PO3) here.
 
-## Independent Component Analysis (ICA)
+![Subject 1 Frequency Domain](images/s1-fr.png)
+*Figure 1: Frequency-domain plot for Subject 1 showing high noise in channel F8.*
 
-ICA is applied to remove eye movement, muscle, and line noise artifacts. The removed components are documented and classified based on their source.
+![Subject 9 Time Domain](images/s9-td.png)
+*Figure 2: Time-domain plot for Subject 9 showing noise in channels PO8 and PO3.*
 
-### Example of Artifact Removal:
-- **Example 3**: Eye blinking artifact removed.
-- **Example 6**: Muscle artifact removed.
+### Independent Component Analysis (ICA) and Artifact Removal
 
-### Image Placement: Add images comparing signals before and after ICA, especially for artifacts like eye blinks and muscle movements.
+In this project, Independent Component Analysis (ICA) was used to identify and remove artifacts such as eye blinks, muscle movements, line noise, and other non-brain activity. Below are examples of artifacts identified and removed using ICA.
+
+#### Example 1: Eye Blink Artifact
+Eye blink artifacts are common and create large deflections, especially over the frontal electrodes. ICA helped identify the component responsible for these deflections, which was then removed.
+
+![Eye Blink ICA](images/ica_eye_blink.png)
+*Figure 1: Scalp map and frequency/time-domain plots showing the eye blink artifact.*
+
+#### Example 2: Muscle Artifact
+Muscle artifacts, typically appearing as high-frequency noise, were identified and removed using ICA. These components were classified as non-brain sources based on their high-frequency signatures and scalp distribution.
+
+![Muscle Artifact ICA](images/ica_muscle.png)
+*Figure 2: Scalp map and frequency/time-domain plots showing muscle artifact.*
+
+#### Example 3: Line Noise Artifact
+Line noise at 60 Hz can contaminate EEG signals. ICA was used to identify and remove this noise.
+
+![Line Noise ICA](images/ica_line_noise.png)
+*Figure 3: Scalp map and frequency/time-domain plots showing line noise at 60 Hz.*
+
+#### Example 4: Peak at 23 Hz (Not Typical 1/f Pattern)
+An atypical peak at approximately 23 Hz was identified in the data, which is inconsistent with brain activity. ICA was used to remove this component.
+
+![Peak at 23 Hz ICA](images/ica_23hz.png)
+*Figure 4: Scalp map and frequency/time-domain plots showing the atypical peak at 23 Hz.*
+
+#### Example 5: Eye Movement Artifact
+Eye movement artifacts typically show up as bilateral activity in the frontal electrodes. The rise and fall in the signal correspond to eye movements, which were identified and removed using ICA.
+
+![Eye Movement ICA](images/ica_eye_movement.png)
+*Figure 5: Scalp map and frequency/time-domain plots showing the eye movement artifact.*
+
+#### Example 6: Rhythmic Artifact
+Rhythmic artifacts, typically non-brain-related oscillations, were identified in the data. These were removed as they did not match expected brain activity patterns.
+
+![Rhythmic Artifact ICA](images/ica_rhythmic.png)
+*Figure 6: Scalp map and frequency/time-domain plots showing the rhythmic artifact.*
+
+
 
 ## Event List and Epoching
 
